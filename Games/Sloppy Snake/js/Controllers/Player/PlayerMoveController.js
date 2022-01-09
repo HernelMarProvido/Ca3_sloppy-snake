@@ -48,7 +48,7 @@ class PlayerMoveController {
     handleInput(gameTime, parent) {
 
         this.handleMove(gameTime, parent);
-        this.handleJump(gameTime, parent);
+        // this.handleJump(gameTime, parent);
     }
 
     handleMove(gameTime, parent) {
@@ -71,6 +71,24 @@ class PlayerMoveController {
 
             // Update the player's animation
             parent.artist.setTake("Run Right");
+        }
+         // If the move Up key is pressed
+         else if (this.keyboardManager.isKeyDown(this.moveKeys[2])) {
+
+            // Add velocity to begin moving the player right
+            parent.body.addVelocityX(this.runVelocity * gameTime.elapsedTimeInMs);
+
+            // Update the player's animation
+            parent.artist.setTake("Run Up");
+        }
+         // If the move Down key is pressed
+         else if (this.keyboardManager.isKeyDown(this.moveKeys[3])) {
+
+            // Add velocity to begin moving the player right
+            parent.body.addVelocityX(this.runVelocity * gameTime.elapsedTimeInMs);
+
+            // Update the player's animation
+            parent.artist.setTake("Run Down");
         }
 
         

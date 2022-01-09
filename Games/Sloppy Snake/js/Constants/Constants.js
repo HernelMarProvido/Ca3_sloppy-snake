@@ -147,9 +147,9 @@ class GameData {
   
   
     static RUNNER_START_POSITION = new Vector2(80, 250);
-    static RUNNER_MOVE_KEYS = [Keys.A, Keys.D, Keys.Space];
+    static RUNNER_MOVE_KEYS = [Keys.A, Keys.D, Keys.W, Keys.S, Keys.Space];
     static RUNNER_RUN_VELOCITY = 0.05;
-    static RUNNER_JUMP_VELOCITY = 0.5;
+    static RUNNER_JUMP_VELOCITY = 0;
   
     static RUNNER_ANIMATION_DATA = {
   
@@ -188,7 +188,7 @@ class GameData {
         // Animation 2
         "Run Right": {
   
-          frameRatePerSec: 12,
+          frameRatePerSec: 6,
   
           // -1 = Loop forever
           //  0 = Run once (no loop)
@@ -211,7 +211,65 @@ class GameData {
         // Animation 3
         "Run Left": {
   
-          frameRatePerSec: 12,
+          frameRatePerSec: 6,
+  
+          // -1 = Loop forever
+          //  0 = Run once (no loop)
+          //  N = Loop N times
+          maxLoopCount: -1,
+  
+          startFrameIndex: 0,
+          endFrameIndex: 1,
+  
+          // Notice that I chose the largest of all the widths taken from the frames
+          // array below
+          boundingBoxDimensions: new Vector2(40, 40),
+  
+          frames: [
+  
+            // This list of rects just represent the positions
+            // and dimension of each individual animation frame
+            // on the sprite sheet
+  
+            new Rect(130, 30, 95, 40),   // Animation frame 1
+            new Rect(135, 63, 100, 50),   // Animation frame 2
+
+            
+          ]
+        },
+         // Animation 4
+         "Run Up": {
+  
+          frameRatePerSec: 6,
+  
+          // -1 = Loop forever
+          //  0 = Run once (no loop)
+          //  N = Loop N times
+          maxLoopCount: -1,
+  
+          startFrameIndex: 0,
+          endFrameIndex: 1,
+  
+          // Notice that I chose the largest of all the widths taken from the frames
+          // array below
+          boundingBoxDimensions: new Vector2(40, 40),
+  
+          frames: [
+  
+            // This list of rects just represent the positions
+            // and dimension of each individual animation frame
+            // on the sprite sheet
+  
+            new Rect(130, 30, 95, 40),   // Animation frame 1
+            new Rect(135, 63, 100, 50),   // Animation frame 2
+
+            
+          ]
+        },
+         // Animation 5
+         "Run Down": {
+  
+          frameRatePerSec: 6,
   
           // -1 = Loop forever
           //  0 = Run once (no loop)
