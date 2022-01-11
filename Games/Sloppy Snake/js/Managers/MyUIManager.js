@@ -94,6 +94,7 @@ class MyUIManager extends UIManager {
 
                     if (hudSprite.id === "Pause Button") {
                         
+                        // reload the page to get back to main menu when pause botton is clicked..
                         document.location.reload();                       
 
                         console.log("You clicked the pause button!");

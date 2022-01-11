@@ -35,10 +35,7 @@ class PlayerMoveController {
 
     applyForces(gameTime, parent) {
 
-        // Apply basic physic forces to the
-        // player sprite
-
-        
+        // I keep the gravity so replicate Floppy bird style.
         parent.body.applyGravity(gameTime);
         
 
@@ -54,6 +51,7 @@ class PlayerMoveController {
         this.handleJump(gameTime, parent);
     }
 
+    // This code allows to me to direct where my character can go by pressing A, W ,D Keys
     handleMove(gameTime, parent) {
 
         // If the move left key is pressed
@@ -66,7 +64,7 @@ class PlayerMoveController {
             parent.artist.setTake("Run Left");
         }
 
-        // If the move right key is pressed
+        // If the Run right key is pressed
         else if (this.keyboardManager.isKeyDown(this.moveKeys[1])) {
 
             // Add velocity to begin moving the player right
@@ -78,7 +76,7 @@ class PlayerMoveController {
         
     }
 
-    // Allow snake to float
+    // This here Allows my snake to Float Up like floppy bird and also give sounds.
     handleJump(gameTime, parent) {
 
         // If the W key is pressed
@@ -86,15 +84,19 @@ class PlayerMoveController {
 
             parent.body.setVelocityY(-this.jumpVelocity * gameTime.elapsedTimeInMs);
 
-                // Create a jump sound notification
+                // This here Is for my jump sound when W key is pressed.
+                // notifications are used here.
                 notificationCenter.notify(
                     new Notification(
                         NotificationType.Sound,
                         NotificationAction.Play,
+                        // Here I call Sound from assets to create a sound                    
                         ["jump"]
                     )
             );
         }
+
+
 
         // else if (this.keyboardManager.isKeyDown(this.moveKeys[3])) {
 
@@ -228,19 +230,10 @@ class PlayerMoveController {
                     new Notification(
                         NotificationType.Sound,
                         NotificationAction.Play,
+                        // Here is my in-game sound for collect.
                         ["Collect"]
                     )
-                );
-
-                notificationCenter.notify(
-                    new Notification(
-                        NotificationType.Sound,
-                        NotificationAction.Play,
-                        ["Collect"]
-                    )
-                );
-
-          
+                ); 
             }
         }
     }
@@ -254,13 +247,11 @@ class PlayerMoveController {
         // If enemies is null, exit the function
         if (enemies == null) return;
 
-        // Loop through the list of enemy sprites
         for (let i = 0; i < enemies.length; i++) {
 
             const enemy = enemies[i];
 
-            // We can use a simple collision check here to check if the player has collided
-            // with the enemy sprite
+           
             if (parent.transform.boundingBox.intersects(enemy.transform.boundingBox)) {
 
           
@@ -270,6 +261,7 @@ class PlayerMoveController {
                     new Notification(
                         NotificationType.Sound,
                         NotificationAction.Play,
+                        // Here is the game over sound when player is dead/Lose
                         ["game_over"]
                     )
                 );

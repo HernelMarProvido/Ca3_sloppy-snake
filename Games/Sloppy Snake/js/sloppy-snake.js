@@ -442,20 +442,6 @@ function initializePlayer() {
         0                                                       // Explode By
     );
 
-    // The moveable sprite is a sprite which has an attached physics body. The
-    // attached physics body allows us to move the sprite in a particular way.
-    // For example, we can apply velocity to the physics body, to move it in a
-    // particular direction. If we apply a velocity in the -y direction, the 
-    // physics body will move upwards. If we apply a velocity in the +x 
-    // direction, the physics body will move to the left. The physics body, in
-    // turn, moves the sprite. This is done by updating the position of the
-    // sprite to match the position of the physics body. Additionally, forces
-    // are automatically applied to the physics body every update. This 
-    // includes gravity and friction. We can define how much gravity and how
-    // much friction is applied to the physics body by setting those values
-    // directly (see below an example of how this works). We can also set the
-    // max speed of the physics body to define how fast we want to allow it to
-    // move.
 
     sprite = new MoveableSprite(
         "Player",                                               // ID

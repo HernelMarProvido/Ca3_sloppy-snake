@@ -72,6 +72,7 @@ const NotificationAction = {
     UpdateHealthBar: "UpdateHealthBar",
     
     // Add more here as required
+    StopMusic: "StopMusic",
 };
 
 // Objects can register to particular notifications which they are

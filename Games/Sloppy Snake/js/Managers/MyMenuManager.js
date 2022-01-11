@@ -77,7 +77,7 @@ class MyMenuManager extends MenuManager {
 
     initialize() {
 
-        // TO DO: Please make sure to hide any other menus that you have created
+        // To Hide all the other menu when a menu is selected
 
         // Hide the exit menu
         $('#exit_menu').hide();
@@ -90,11 +90,6 @@ class MyMenuManager extends MenuManager {
         // Hide the profile menu
         $('#profile_menu').hide();
         $('#profile_menu').addClass('hidden');
-
-
-        // Hide the YOUR_MENU menu
-        // $('#YOUR_MENU_ID').hide();
-        // $('#YOUR_MENU_ID').addClass('hidden');
 
         // If the play button is clicked
         $('.play').click(function () {
@@ -110,6 +105,7 @@ class MyMenuManager extends MenuManager {
                     [StatusType.Updated | StatusType.Drawn]
                 )
             );
+            // Send a notification to start the game background music When player select Start. 
             notificationCenter.notify(
                 new Notification(
                     NotificationType.Sound,
@@ -119,25 +115,51 @@ class MyMenuManager extends MenuManager {
             );
         });
 
-        // If the audio button is clicked
-        // Or more specifically - if an element which has
-        // the audio class is clicked
+        // If the audio button is clicke
+        let sound = false;
+        if(sound === false){
         $('#audio_button').click(function () {
 
-            // Do something...
+            // Plays main music theme of game
+            
             notificationCenter.notify(
                 new Notification(
                     NotificationType.Sound,
                     NotificationAction.Play,
-                    ["background_sound"]
-                )
+                    ["background_sound"],
+                    
+                ),
+                sound = true
             );
+               
 
             console.log("You clicked the audio button!");
-            
-            // Hint: Send a notification to toggle the audio on/off
+        
         });
+         }
 
+        // if(sound === true){
+        // $('#audio_button').click(function () {
+
+        //     // Music is pause if sound is true.
+            
+        //          notificationCenter.notify(
+        //         new Notification(
+        //             NotificationType.Sound,
+        //             NotificationAction.Pause,
+        //             [""],
+        //         ),
+        //         sound = false
+        //     );
+           
+           
+
+        //     console.log("You clicked the audio button!");
+        
+        // });
+        //  }
+
+        
         // If the exit button is clicked
         $('.exit').click(function () {
 

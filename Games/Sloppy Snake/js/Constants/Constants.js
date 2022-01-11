@@ -1,5 +1,6 @@
 
 class GameData {
+    // Here is My sound that are taken from assets 
     static AUDIO_CUE_ARRAY = [
       new AudioCue("background_sound", AudioType.Background, 1, 1, 0, true),
       new AudioCue("jump", AudioType.Move, 1, 1, 0, false),
@@ -165,6 +166,7 @@ class GameData {
           boundingBoxDimensions: new Vector2(30, 35),
   
           frames: [
+            
             new Rect(20, 130, 45, 25), // Frame 1
             new Rect(65, 130, 45, 25), // Frame 2
           ]
@@ -175,12 +177,14 @@ class GameData {
   
     // Defualt Snake position
     static RUNNER_START_POSITION = new Vector2(0, 250);
-    static RUNNER_MOVE_KEYS = [Keys.A, Keys.D, Keys.W, Keys.Enter]; // S keys was remove
+    // the arrays of keys which will be used
+    static RUNNER_MOVE_KEYS = [Keys.A, Keys.D, Keys.W]; // S keys was remove
 
     // this give my snake some body physics
-    // this give my snake its movements.
+    // this give my snake its movements. 
+    // this is my game specified in pixels per second
     static RUNNER_RUN_VELOCITY = 0.01;
-    static RUNNER_JUMP_VELOCITY = 0.3;
+    static RUNNER_JUMP_VELOCITY = 0.25;
   
     static RUNNER_ANIMATION_DATA = {
   
@@ -209,9 +213,6 @@ class GameData {
   
           frames: [
   
-            // This list of rects just represent the positions
-            // and dimension of each individual animation frame
-            // on the sprite sheet
             new Rect(13, 13, 100, 50),    // Animation frame 2
           ]
         },
@@ -258,9 +259,6 @@ class GameData {
   
           frames: [
   
-            // This list of rects just represent the positions
-            // and dimension of each individual animation frame
-            // on the sprite sheet
   
             new Rect(130, 30, 95, 40),   // Animation frame 1
             new Rect(135, 63, 100, 50),   // Animation frame 2
@@ -268,64 +266,8 @@ class GameData {
             
           ]
         },
-        //  // Animation 4
-        //  "Run Up": {
-  
-        //   frameRatePerSec: 6,
-  
-        //   // -1 = Loop forever
-        //   //  0 = Run once (no loop)
-        //   //  N = Loop N times
-        //   maxLoopCount: -1,
-  
-        //   startFrameIndex: 0,
-        //   endFrameIndex: 1,
-  
-        //   // Notice that I chose the largest of all the widths taken from the frames
-        //   // array below
-        //   boundingBoxDimensions: new Vector2(40, 40),
-  
-        //   frames: [
-  
-        //     // This list of rects just represent the positions
-        //     // and dimension of each individual animation frame
-        //     // on the sprite sheet
-  
-        //     new Rect(130, 30, 95, 40),   // Animation frame 1
-        //     new Rect(135, 63, 100, 50),   // Animation frame 2
 
-            
-        //   ]
-        // },
-        //  // Animation 5
-        //  "Run Down": {
-  
-        //   frameRatePerSec: 6,
-  
-        //   // -1 = Loop forever
-        //   //  0 = Run once (no loop)
-        //   //  N = Loop N times
-        //   maxLoopCount: -1,
-  
-        //   startFrameIndex: 0,
-        //   endFrameIndex: 1,
-  
-        //   // Notice that I chose the largest of all the widths taken from the frames
-        //   // array below
-        //   boundingBoxDimensions: new Vector2(40, 40),
-  
-        //   frames: [
-  
-        //     // This list of rects just represent the positions
-        //     // and dimension of each individual animation frame
-        //     // on the sprite sheet
-  
-        //     new Rect(130, 30, 95, 40),   // Animation frame 1
-        //     new Rect(135, 63, 100, 50),   // Animation frame 2
 
-            
-        //   ]
-        // },
       }
     };
   
@@ -348,6 +290,7 @@ class GameData {
         }
       }
     };
+    
     // pause button to pause game.
     static Pause_Button = {
 
