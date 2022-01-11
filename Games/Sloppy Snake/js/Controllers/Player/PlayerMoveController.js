@@ -279,9 +279,11 @@ class PlayerMoveController {
                   new Notification(
                     NotificationType.Sprite,
                     NotificationAction.RemoveFirst,
-                    this.objectManager.get(ActorType.Player)
+                    this.objectManager.get(ActorType.Player),
+                   // document.location.reload() // Reload page to restart the game
                   )
                 );
+
 
             
             }
