@@ -502,6 +502,38 @@ function initializeEnemies() {
     let artist;
 
     let sprite;
+
+    artist = new AnimatedSpriteArtist(
+        context,
+        1,
+        GameData.ENEMY_ANIMATION_DATA
+    );
+
+    artist.setTake("Box");
+
+    transform = new Transform2D(
+        new Vector2(400, 200),
+        0,
+        new Vector2(1, 1),
+        Vector2.Zero,
+        artist.getBoundingBoxByTakeName("Box"),
+        0
+    );
+
+    sprite = new MoveableSprite(
+        "Box",
+        transform,
+        ActorType.Enemy,
+        CollisionType.Collidable,
+        StatusType.Updated | StatusType.Drawn,
+        artist,
+        1,
+        1
+    );
+
+
+    // Add enemy to object manager
+    objectManager.add(sprite);
 }
 
 // Hard-coded for demo purposes... you should not do this in

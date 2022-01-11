@@ -282,29 +282,29 @@ class PlayerMoveController {
                 // that will be fired if the player collides with a pickup
                 // sprite
 
-                // notificationCenter.notify(
-                //     new Notification(
-                //         NotificationType.Sound,
-                //         NotificationAction.Play,
-                //         ["game_over"]
-                //     )
-                // );
+                notificationCenter.notify(
+                    new Notification(
+                        NotificationType.Sound,
+                        NotificationAction.Play,
+                        ["game_over"]
+                    )
+                );
 
-                // notificationCenter.notify(
-                //   new Notification(
-                //     NotificationType.Sprite,
-                //     NotificationAction.RemoveFirst,
-                //     [enemy]
-                //   )
-                // );
+                notificationCenter.notify(
+                  new Notification(
+                    NotificationType.Sprite,
+                    NotificationAction.RemoveFirst,
+                    [enemy]
+                  )
+                );
 
-                // notificationCenter.notify(
-                //     new Notification(
-                //         NotificationType.GameState,
-                //         NotificationAction.Health,
-                //         [-5]
-                //     )
-                // );
+                notificationCenter.notify(
+                    new Notification(
+                        NotificationType.GameState,
+                        NotificationAction.Health,
+                        [-5]
+                    )
+                );
             }
         }
     }

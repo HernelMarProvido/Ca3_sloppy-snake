@@ -206,15 +206,6 @@ class PlayerMoveController {
                     )
                 );
 
-                // Uncomment this code to see how we could remove ALL platforms    
-                // notificationCenter.notify(
-                //     new Notification(
-                //         NotificationType.Sprite,            // Who is registered to listen to this notification?        see ObjectManager -> registerForNotifications
-                //         NotificationAction.RemoveAllByType, // How does the ObjectManager handle the notification?      see ObjectManager -> handleSpriteNotification
-                //         [ActorType.Platform]                // What parameters does the method you are calling expect?  see ObjectManager -> removeAllByType()
-                //     )
-                // );
-
                 notificationCenter.notify(
                     new Notification(
                         NotificationType.Sound,
@@ -231,15 +222,7 @@ class PlayerMoveController {
                     )
                 );
 
-                // Uncomment this code to see how we could remove the first platform that has an
-                // x position > 400
-                // notificationCenter.notify(
-                //     new Notification(
-                //         NotificationType.Sprite,
-                //         NotificationAction.RemoveFirstBy,
-                //         [ActorType.Platform, platform => platform.transform.translation.x > 400]
-                //     )
-                // );
+          
             }
         }
     }
@@ -256,7 +239,6 @@ class PlayerMoveController {
         // Loop through the list of enemy sprites
         for (let i = 0; i < enemies.length; i++) {
 
-            // Store a reference to the current enemy sprite
             const enemy = enemies[i];
 
             // We can use a simple collision check here to check if the player has collided
@@ -265,37 +247,26 @@ class PlayerMoveController {
 
                 // Your code here...
 
-                // Play a sound?
-                // Remove the enemy?
-                // Update the player's health?
+                // PLAY GAME OVER SOUNDS TO TELL PLAYER HE LOST
 
-                // Uncomment the below code to create three notifications
-                // that will be fired if the player collides with a pickup
-                // sprite
+                notificationCenter.notify(
+                    new Notification(
+                        NotificationType.Sound,
+                        NotificationAction.Play,
+                        ["game_over"]
+                    )
+                );
+                
+                // DELETE PLAYER TO SHOW THAT GAME IS OVER
+                notificationCenter.notify(
+                  new Notification(
+                    NotificationType.Sprite,
+                    NotificationAction.RemoveFirst,
+                    this.objectManager.get(ActorType.Player)
+                  )
+                );
 
-                // notificationCenter.notify(
-                //     new Notification(
-                //         NotificationType.Sound,
-                //         NotificationAction.Play,
-                //         ["game_over"]
-                //     )
-                // );
-
-                // notificationCenter.notify(
-                //   new Notification(
-                //     NotificationType.Sprite,
-                //     NotificationAction.RemoveFirst,
-                //     [enemy]
-                //   )
-                // );
-
-                // notificationCenter.notify(
-                //     new Notification(
-                //         NotificationType.GameState,
-                //         NotificationAction.Health,
-                //         [-5]
-                //     )
-                // );
+            
             }
         }
     }

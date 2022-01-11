@@ -9,7 +9,8 @@ class GameData {
   
     static BACKGROUND_DIMENSIONS = new Vector2(384, 216);
   
-  
+    
+
     static PLATFORM_DATA = {
       id: "Platform",
       spriteSheet: document.getElementById("snailbait_jungle_tileset"),
@@ -158,6 +159,9 @@ class GameData {
   
     static RUNNER_START_POSITION = new Vector2(0, 250);
     static RUNNER_MOVE_KEYS = [Keys.A, Keys.D, Keys.W];
+
+    // this give my snake some body physics
+    // this give my snake its movements.
     static RUNNER_RUN_VELOCITY = 0.02;
     static RUNNER_JUMP_VELOCITY = 0.3;
   
@@ -311,30 +315,28 @@ class GameData {
     static ENEMY_ANIMATION_DATA = {
   
       id: "Enemy Animation Data",
-      spriteSheet: document.getElementById("snailbait_sprite_sheet"),
+      spriteSheet: document.getElementById("snailbait_jungle_tileset"),
       
       // Animations
       takes: {
   
         // Animation 1
-        "Wasp Fly": {
+        "Box": {
   
-          frameRatePerSec: 10,
+          frameRatePerSec: 0,
           
           // -1 = Loop forever
           //  0 = Run once (no loop)
           //  N = Loop N times
-          maxLoopCount: -1,
+          maxLoopCount: 0,
   
           startFrameIndex: 0,
           endFrameIndex: 2,
   
-          boundingBoxDimensions: new Vector2(35, 50),
+          boundingBoxDimensions: new Vector2(40, 40),
   
           frames: [
-            new Rect(20, 234, 35, 50),
-            new Rect(90, 234, 35, 50),
-            new Rect(160, 234, 35, 50)
+            new Rect(90, 7, 45, 49),       
           ]
         }
       }
