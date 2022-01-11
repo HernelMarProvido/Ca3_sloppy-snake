@@ -158,11 +158,11 @@ class GameData {
   
     // Defualt Snake position
     static RUNNER_START_POSITION = new Vector2(0, 250);
-    static RUNNER_MOVE_KEYS = [Keys.A, Keys.D, Keys.W]; // S keys was remove
+    static RUNNER_MOVE_KEYS = [Keys.A, Keys.D, Keys.W, Keys.Enter]; // S keys was remove
 
     // this give my snake some body physics
     // this give my snake its movements.
-    static RUNNER_RUN_VELOCITY = 0.02;
+    static RUNNER_RUN_VELOCITY = 0.01;
     static RUNNER_JUMP_VELOCITY = 0.3;
   
     static RUNNER_ANIMATION_DATA = {
@@ -331,7 +331,7 @@ class GameData {
         }
       }
     };
-
+    // pause button to pause game.
     static Pause_Button = {
 
       id: "PAUSE_BUTTON",

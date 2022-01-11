@@ -78,7 +78,7 @@ class PlayerMoveController {
         
     }
 
-    // UPDATE to Allow snake to float
+    // Allow snake to float
     handleJump(gameTime, parent) {
 
         // If the W key is pressed
@@ -112,6 +112,7 @@ class PlayerMoveController {
         // }
 
     }
+ 
 
     checkCollisions(parent) {
 
@@ -262,10 +263,9 @@ class PlayerMoveController {
             // with the enemy sprite
             if (parent.transform.boundingBox.intersects(enemy.transform.boundingBox)) {
 
-                // Your code here...
+          
 
                 // PLAY GAME OVER SOUNDS TO TELL PLAYER HE LOST
-
                 notificationCenter.notify(
                     new Notification(
                         NotificationType.Sound,
@@ -324,21 +324,5 @@ class PlayerMoveController {
         );
     }
 
-    equals(other) {
 
-        // TO DO...
-        throw "Not Yet Implemented";
-    }
-
-    toString() {
-
-        // TO DO...
-        throw "Not Yet Implemented";
-    }
-
-    clone() {
-
-        // TO DO...
-        throw "Not Yet Implemented";
-    }
 }
