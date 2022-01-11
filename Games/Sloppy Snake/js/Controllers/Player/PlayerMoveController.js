@@ -18,6 +18,7 @@ class PlayerMoveController {
         this.notificationCenter = notificationCenter;
         this.keyboardManager = keyboardManager;
         this.objectManager = objectManager;
+  
 
         this.moveKeys = moveKeys;
         this.runVelocity = runVelocity;
@@ -37,7 +38,9 @@ class PlayerMoveController {
         // Apply basic physic forces to the
         // player sprite
 
+        
         parent.body.applyGravity(gameTime);
+        
 
         if (parent.body.onGround) {
             
@@ -78,11 +81,9 @@ class PlayerMoveController {
     // UPDATE to Allow snake to float
     handleJump(gameTime, parent) {
 
-        // If the jump key is pressed
+        // If the W key is pressed
         if (this.keyboardManager.isKeyDown(this.moveKeys[2])) {
 
-            // Apply velocity to begin moving the player up
-            // This gives the effect of jumping 
             parent.body.setVelocityY(-this.jumpVelocity * gameTime.elapsedTimeInMs);
 
                 // Create a jump sound notification
@@ -94,6 +95,22 @@ class PlayerMoveController {
                     )
             );
         }
+
+        // else if (this.keyboardManager.isKeyDown(this.moveKeys[3])) {
+
+        //     // If the S key is pressed
+        //     parent.body.setVelocityY(this.jumpVelocity * gameTime.elapsedTimeInMs);
+
+        //     // Create a jump sound notification
+        //     notificationCenter.notify(
+        //         new Notification(
+        //             NotificationType.Sound,
+        //             NotificationAction.Play,
+        //             ["jump"]
+        //         )
+        // );
+        // }
+
     }
 
     checkCollisions(parent) {

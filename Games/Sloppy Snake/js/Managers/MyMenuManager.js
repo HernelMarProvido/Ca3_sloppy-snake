@@ -87,6 +87,10 @@ class MyMenuManager extends MenuManager {
         $('#control_menu').hide();
         $('#control_menu').addClass('hidden');
 
+        // Hide the profile menu
+        $('#profile_menu').hide();
+        $('#profile_menu').addClass('hidden');
+
         // Hide the YOUR_MENU menu
         // $('#YOUR_MENU_ID').hide();
         // $('#YOUR_MENU_ID').addClass('hidden');
@@ -147,6 +151,14 @@ class MyMenuManager extends MenuManager {
             // Show control menu
             $('#control_menu').show();
             $('#control_menu').removeClass('hidden');
+        });
+
+        // If the profile button is clicked
+        $('.profile').click(function () {
+
+            // Show profile menu
+            $('#profile_menu').show();
+            $('#profile_menu').removeClass('hidden');
         });
     }
 

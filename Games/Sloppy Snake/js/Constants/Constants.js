@@ -156,9 +156,9 @@ class GameData {
         
     };
   
-  
+    // Defualt Snake position
     static RUNNER_START_POSITION = new Vector2(0, 250);
-    static RUNNER_MOVE_KEYS = [Keys.A, Keys.D, Keys.W];
+    static RUNNER_MOVE_KEYS = [Keys.A, Keys.D, Keys.W]; // S keys was remove
 
     // this give my snake some body physics
     // this give my snake its movements.
@@ -317,26 +317,36 @@ class GameData {
       id: "Enemy Animation Data",
       spriteSheet: document.getElementById("snailbait_jungle_tileset"),
       
-      // Animations
       takes: {
-  
-        // Animation 1
         "Box": {
   
-          frameRatePerSec: 0,
-          
-          // -1 = Loop forever
-          //  0 = Run once (no loop)
-          //  N = Loop N times
-          maxLoopCount: 0,
-  
           startFrameIndex: 0,
-          endFrameIndex: 2,
+          endFrameIndex: 0,
   
           boundingBoxDimensions: new Vector2(40, 40),
   
           frames: [
             new Rect(90, 7, 45, 49),       
+          ]
+        }
+      }
+    };
+
+    static Pause_Button = {
+
+      id: "PAUSE_BUTTON",
+      spriteSheet: document.getElementById("ui_sprite_sheet"),
+      
+      takes: {
+        "Pause": {
+  
+          startFrameIndex: 0,
+          endFrameIndex: 0,
+  
+          boundingBoxDimensions: new Vector2(32, 32),
+  
+          frames: [
+            new Rect(0, 0, 32, 32),       
           ]
         }
       }

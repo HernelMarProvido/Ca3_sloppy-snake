@@ -30,6 +30,7 @@
                     <li><a href="javascript:void(0)" class="button play">Start Game</a></li>
                     <li><a href="javascript:void(0)" id="audio_button" class="button">Toggle Audio</a></li>
                     <li><a href="javascript:void(0)" class="button control">Control Menu</a></li>
+                    <li><a href="javascript:void(0)" class="button profile">Profiling</a></li>
                     <li><a href="javascript:void(0)" class="button exit">Exit Game</a></li>
                 </ul>
             </div>
@@ -48,6 +49,14 @@
             </div>
 
             <!-- Add More Menu's Here -->
+            <div id="profile_menu" class="menu hidden">
+                <h1>Top Five Functions In Terms Of Time</h1>
+                <P>1: PlayerMoveControll - This Part took most time due to my attempt of giving a Snake game type mechanics</P>
+                <P>2: Collision Detection - This took alot of time due to my charater getting stuck in side obstacles</P>
+                <P>3: Keyboard & Mouse Support - Due to the attempt of trying to give it snake type Mechanics</P>
+                <P>4: Sprites Animations - Just playing around with the Frames dimentions</P>
+                <P>5: Player Score - I Could not get Text to show on screen</P>
+            </div>
 
             <!-- 
                 Check out the initialize function of MyMenuManager to see how menu's are
@@ -68,15 +77,6 @@
 
 
     <img id="ui_sprite_sheet" class="sprite" src="assets/images/ui/ui-spritesheet.png" />
-    <!-- <img id="snailbait_background_1" class="sprite" src="assets/images/background/background-1.png" />
-    <img id="snailbait_background_2" class="sprite" src="assets/images/background/background-2.png" />
-    <img id="snailbait_background_3" class="sprite" src="assets/images/background/background-3.png" />
-    <img id="snailbait_background_4" class="sprite" src="assets/images/background/background-4.png" />
-    <img id="snailbait_background_5" class="sprite" src="assets/images/background/background-5.png" />
-
-    
-    <img id="snailbait_sprite_sheet" class="sprite" src="assets/images/spritesheet.png" />
-    <img id="ui_sprite_sheet" class="sprite" src="assets/images/ui/ui-spritesheet.png" /> -->
 
     <!-- Load Audio Assets -->
     <audio preload="auto" id="background_sound" src="assets/sound/background/background.wav"></audio>

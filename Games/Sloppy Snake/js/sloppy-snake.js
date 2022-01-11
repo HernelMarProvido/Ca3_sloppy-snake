@@ -567,14 +567,6 @@ function initializeHUD() {
         Vector2.Zero,                                   // Source Position
         new Vector2(32, 32),                            // Source Dimension
 
-        // Set this to true if you want the sprite to stay in one
-        // position on the screen (i.e., the sprite WON'T scroll
-        // off-screen if the camera moves right or left).
-
-        // Set this to false if you want the sprite to move with
-        // the world (i.e., the sprite WILL scroll off-screen when
-        // the camera moves to the right or to the left.
-
         true                                            // Fixed Position
     );
 
@@ -589,8 +581,8 @@ function initializeHUD() {
         1
     );
 
-    // Add sprite to the object manager
-    // objectManager.add(sprite);
+   
+    objectManager.add(sprite);
 }
 
 function initializeOnScreenText() {
