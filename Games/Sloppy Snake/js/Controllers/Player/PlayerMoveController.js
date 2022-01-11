@@ -75,30 +75,23 @@ class PlayerMoveController {
         
     }
 
-    // UPDATE Up And Down
+    // UPDATE to Allow snake to float
     handleJump(gameTime, parent) {
-
-    
-        // if (parent.body.jumping || !parent.body.onGround) return;
 
         // If the jump key is pressed
         if (this.keyboardManager.isKeyDown(this.moveKeys[2])) {
-
-            // // Update body variables
-            // parent.body.jumping = true;
-            // parent.body.onGround = false;
 
             // Apply velocity to begin moving the player up
             // This gives the effect of jumping 
             parent.body.setVelocityY(-this.jumpVelocity * gameTime.elapsedTimeInMs);
 
-            // Create a jump sound notification
-            notificationCenter.notify(
-                new Notification(
-                    NotificationType.Sound,
-                    NotificationAction.Play,
-                    ["jump"]
-                )
+                // Create a jump sound notification
+                notificationCenter.notify(
+                    new Notification(
+                        NotificationType.Sound,
+                        NotificationAction.Play,
+                        ["jump"]
+                    )
             );
         }
     }
