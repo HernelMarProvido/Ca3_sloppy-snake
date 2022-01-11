@@ -93,6 +93,8 @@ class MyUIManager extends UIManager {
                     // If the user clicks the flip gravity button...
 
                     if (hudSprite.id === "Pause Button") {
+                        
+                        document.location.reload();                       
 
                         console.log("You clicked the pause button!");
                     }

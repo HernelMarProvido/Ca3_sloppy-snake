@@ -567,6 +567,7 @@ function initializeHUD() {
         Vector2.Zero,                                   // Source Position
         new Vector2(32, 32),                            // Source Dimension
 
+
         true                                            // Fixed Position
     );
 

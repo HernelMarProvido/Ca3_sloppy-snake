@@ -91,6 +91,7 @@ class MyMenuManager extends MenuManager {
         $('#profile_menu').hide();
         $('#profile_menu').addClass('hidden');
 
+
         // Hide the YOUR_MENU menu
         // $('#YOUR_MENU_ID').hide();
         // $('#YOUR_MENU_ID').addClass('hidden');
@@ -160,6 +161,12 @@ class MyMenuManager extends MenuManager {
             $('#profile_menu').show();
             $('#profile_menu').removeClass('hidden');
         });
+
+        
+        // // If the profile button is clicked
+        // $('.control.return').click(function () {
+        //     $('#return').show(document.location.reload());           
+        // });
     }
 
     update(gameTime) {

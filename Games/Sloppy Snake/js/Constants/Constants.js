@@ -102,26 +102,43 @@ class GameData {
   
         /****************** Screen 2 *******************/
   
-        // Floor
-        new Vector2(850, 420),
-        new Vector2(900, 420),
-        new Vector2(950, 420),
-        new Vector2(1000, 420),
-        new Vector2(1050, 420),
-        new Vector2(1100, 420),
-        new Vector2(1150, 420),
-        new Vector2(1200, 420),
-  
-        // GAP!
-  
-        new Vector2(1400, 420),
-        new Vector2(1450, 420),
-        new Vector2(1500, 420),
-        new Vector2(1550, 420),
-        new Vector2(1600, 420),
-        new Vector2(1650, 420),
-        new Vector2(1700, 420),
-        new Vector2(1750, 420),
+       // Floor
+       new Vector2(850, 420),
+       new Vector2(900, 420),
+       new Vector2(950, 420),
+       new Vector2(1000, 420),
+       new Vector2(1050, 420),
+       new Vector2(1100, 420),
+       new Vector2(1150, 420),
+       new Vector2(1200, 420),
+       new Vector2(1250, 420),
+       new Vector2(1300, 420),
+       new Vector2(1350, 420),
+       new Vector2(1400, 420),
+       new Vector2(1450, 420),
+       new Vector2(1500, 420),
+       new Vector2(1550, 420),
+       new Vector2(1600, 420),
+       new Vector2(1700, 420),
+
+         // Floor UP
+         new Vector2(850, 0),
+       new Vector2(900, 0),
+       new Vector2(950, 0),
+       new Vector2(1000, 0),
+       new Vector2(1050, 0),
+       new Vector2(1100, 0),
+       new Vector2(1150, 0),
+       new Vector2(1200, 0),
+       new Vector2(1250, 0),
+       new Vector2(1300, 0),
+       new Vector2(1350, 0),
+       new Vector2(1400, 0),
+       new Vector2(1450, 0),
+       new Vector2(1500, 0),
+       new Vector2(1550, 0),
+       new Vector2(1600, 0),
+       new Vector2(1700, 0),
       ]
     };
   
