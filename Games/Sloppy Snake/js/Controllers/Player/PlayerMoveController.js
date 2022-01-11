@@ -51,7 +51,7 @@ class PlayerMoveController {
         this.handleJump(gameTime, parent);
     }
 
-    // This code allows to me to direct where my character can go by pressing A, W ,D Keys
+    // This code allows to me to direct where my character can go by pressing A ,D Keys
     handleMove(gameTime, parent) {
 
         // If the move left key is pressed
@@ -271,6 +271,7 @@ class PlayerMoveController {
                   new Notification(
                     NotificationType.Sprite,
                     NotificationAction.RemoveFirst,
+                    // player dies
                     this.objectManager.get(ActorType.Player),
                    // document.location.reload() // Reload page to restart the game
                   )

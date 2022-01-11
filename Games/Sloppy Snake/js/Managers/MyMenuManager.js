@@ -110,6 +110,7 @@ class MyMenuManager extends MenuManager {
                 new Notification(
                     NotificationType.Sound,
                     NotificationAction.Play,
+                    // Plays background theme
                     ["background_sound"]
                 )
             );
