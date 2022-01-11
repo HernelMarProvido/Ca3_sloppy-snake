@@ -48,7 +48,7 @@ class PlayerMoveController {
     handleInput(gameTime, parent) {
 
         this.handleMove(gameTime, parent);
-        // this.handleJump(gameTime, parent);
+        this.handleJump(gameTime, parent);
     }
 
     handleMove(gameTime, parent) {
@@ -72,41 +72,21 @@ class PlayerMoveController {
             // Update the player's animation
             parent.artist.setTake("Run Right");
         }
-         // If the move Up key is pressed
-         else if (this.keyboardManager.isKeyDown(this.moveKeys[2])) {
-
-            // Add velocity to begin moving the player right
-            parent.body.addVelocityX(this.runVelocity * gameTime.elapsedTimeInMs);
-
-            // Update the player's animation
-            parent.artist.setTake("Run Up");
-        }
-         // If the move Down key is pressed
-         else if (this.keyboardManager.isKeyDown(this.moveKeys[3])) {
-
-            // Add velocity to begin moving the player right
-            parent.body.addVelocityX(this.runVelocity * gameTime.elapsedTimeInMs);
-
-            // Update the player's animation
-            parent.artist.setTake("Run Down");
-        }
-
         
     }
 
-    // UPDATE JUMP 
+    // UPDATE Up And Down
     handleJump(gameTime, parent) {
 
-        // If the player is already jumping, or if the player is
-        // not on the ground, then don't allow the player to jump
-        if (parent.body.jumping || !parent.body.onGround) return;
+    
+        // if (parent.body.jumping || !parent.body.onGround) return;
 
         // If the jump key is pressed
         if (this.keyboardManager.isKeyDown(this.moveKeys[2])) {
 
-            // Update body variables
-            parent.body.jumping = true;
-            parent.body.onGround = false;
+            // // Update body variables
+            // parent.body.jumping = true;
+            // parent.body.onGround = false;
 
             // Apply velocity to begin moving the player up
             // This gives the effect of jumping 

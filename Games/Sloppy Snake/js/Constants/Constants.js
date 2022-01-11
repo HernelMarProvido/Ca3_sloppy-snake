@@ -33,23 +33,33 @@ class GameData {
   
         /****************** Screen 1 *******************/
   
-        
-        new Vector2(100, 100),
-        new Vector2(150, 100),
-        new Vector2(200, 100),
-        new Vector2(250, 100),
-  
-        
-        new Vector2(300, 250),
-        new Vector2(300, 200),
-  
-        
-        new Vector2(450, 325),
-        new Vector2(450, 375),
-        new Vector2(450, 100),
-        new Vector2(450, 150),
-        new Vector2(450, 50),
-        
+        // obstacle 1
+        new Vector2(130, 325),
+        new Vector2(130, 375),
+        new Vector2(130, 150),
+        new Vector2(130, 100),
+        new Vector2(130, 50),
+
+        // obstacle 2
+        new Vector2(330, 325),
+        new Vector2(330, 375),
+        new Vector2(330, 275),
+        new Vector2(330, 100),
+        new Vector2(330, 50),
+       
+        // obstacle 3
+        new Vector2(530, 325),
+        new Vector2(530, 375),
+        new Vector2(530, 275),
+        new Vector2(530, 225),
+        new Vector2(530, 50),
+
+        // obstacle 4
+        new Vector2(730, 325),
+        new Vector2(730, 375),
+        new Vector2(730, 150),
+        new Vector2(730, 100),
+        new Vector2(730, 50),
   
         // Floor
         new Vector2(0, 420),
@@ -146,10 +156,10 @@ class GameData {
     };
   
   
-    static RUNNER_START_POSITION = new Vector2(80, 250);
-    static RUNNER_MOVE_KEYS = [Keys.A, Keys.D, Keys.W, Keys.S, Keys.Space];
-    static RUNNER_RUN_VELOCITY = 0.05;
-    static RUNNER_JUMP_VELOCITY = 0;
+    static RUNNER_START_POSITION = new Vector2(0, 250);
+    static RUNNER_MOVE_KEYS = [Keys.A, Keys.D, Keys.W];
+    static RUNNER_RUN_VELOCITY = 0.02;
+    static RUNNER_JUMP_VELOCITY = 0.3;
   
     static RUNNER_ANIMATION_DATA = {
   
@@ -237,64 +247,64 @@ class GameData {
             
           ]
         },
-         // Animation 4
-         "Run Up": {
+        //  // Animation 4
+        //  "Run Up": {
   
-          frameRatePerSec: 6,
+        //   frameRatePerSec: 6,
   
-          // -1 = Loop forever
-          //  0 = Run once (no loop)
-          //  N = Loop N times
-          maxLoopCount: -1,
+        //   // -1 = Loop forever
+        //   //  0 = Run once (no loop)
+        //   //  N = Loop N times
+        //   maxLoopCount: -1,
   
-          startFrameIndex: 0,
-          endFrameIndex: 1,
+        //   startFrameIndex: 0,
+        //   endFrameIndex: 1,
   
-          // Notice that I chose the largest of all the widths taken from the frames
-          // array below
-          boundingBoxDimensions: new Vector2(40, 40),
+        //   // Notice that I chose the largest of all the widths taken from the frames
+        //   // array below
+        //   boundingBoxDimensions: new Vector2(40, 40),
   
-          frames: [
+        //   frames: [
   
-            // This list of rects just represent the positions
-            // and dimension of each individual animation frame
-            // on the sprite sheet
+        //     // This list of rects just represent the positions
+        //     // and dimension of each individual animation frame
+        //     // on the sprite sheet
   
-            new Rect(130, 30, 95, 40),   // Animation frame 1
-            new Rect(135, 63, 100, 50),   // Animation frame 2
+        //     new Rect(130, 30, 95, 40),   // Animation frame 1
+        //     new Rect(135, 63, 100, 50),   // Animation frame 2
 
             
-          ]
-        },
-         // Animation 5
-         "Run Down": {
+        //   ]
+        // },
+        //  // Animation 5
+        //  "Run Down": {
   
-          frameRatePerSec: 6,
+        //   frameRatePerSec: 6,
   
-          // -1 = Loop forever
-          //  0 = Run once (no loop)
-          //  N = Loop N times
-          maxLoopCount: -1,
+        //   // -1 = Loop forever
+        //   //  0 = Run once (no loop)
+        //   //  N = Loop N times
+        //   maxLoopCount: -1,
   
-          startFrameIndex: 0,
-          endFrameIndex: 1,
+        //   startFrameIndex: 0,
+        //   endFrameIndex: 1,
   
-          // Notice that I chose the largest of all the widths taken from the frames
-          // array below
-          boundingBoxDimensions: new Vector2(40, 40),
+        //   // Notice that I chose the largest of all the widths taken from the frames
+        //   // array below
+        //   boundingBoxDimensions: new Vector2(40, 40),
   
-          frames: [
+        //   frames: [
   
-            // This list of rects just represent the positions
-            // and dimension of each individual animation frame
-            // on the sprite sheet
+        //     // This list of rects just represent the positions
+        //     // and dimension of each individual animation frame
+        //     // on the sprite sheet
   
-            new Rect(130, 30, 95, 40),   // Animation frame 1
-            new Rect(135, 63, 100, 50),   // Animation frame 2
+        //     new Rect(130, 30, 95, 40),   // Animation frame 1
+        //     new Rect(135, 63, 100, 50),   // Animation frame 2
 
             
-          ]
-        },
+        //   ]
+        // },
       }
     };
   

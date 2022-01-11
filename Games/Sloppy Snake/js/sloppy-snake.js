@@ -405,7 +405,7 @@ function initializePickups() {
         // Translate sprite
         spriteClone.transform.translateBy(
             new Vector2(
-                (i * 150),
+                (i * 180),
                 0
             )
         );
